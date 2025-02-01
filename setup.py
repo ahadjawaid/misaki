@@ -9,6 +9,9 @@ setup(
     },
     install_requires=[
         'regex',
+        "phonemizer>=3.3.0",
+        'piper-phonemize-fork>=1.2.0 ; platform_system != "Linux"',
+        'piper-phonemize-cross>=1.2.1 ; platform_system == "Linux"',
     ],
     extras_require={
         'en': ['num2words', 'spacy', 'spacy-curated-transformers', 'phonemizer'],
@@ -17,7 +20,7 @@ setup(
         'zh': ['jieba', 'ordered-set', 'pypinyin', 'cn2an'],
         'vi': ['num2words', 'spacy', 'spacy-curated-transformers', 'underthesea'],
     },
-    python_requires='>=3.7',
+    python_requires='>=3.12',
     author='hexgrad',
     author_email='hello@hexgrad.com',
     description='G2P engine for TTS',
